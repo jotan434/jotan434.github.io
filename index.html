@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seitenklar – Website-Checks für Kleinbetriebe | Portfolio</title>
+  <meta name="description" content="Portfolio-Projekt: Ich prüfe Websites von Kleinbetrieben auf rechtliche Grundlagen, Google- und KI-Sichtbarkeit und Ladezeit am Handy – verständlich erklärt.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Seitenklar – Website-Checks für Kleinbetriebe">
+  <meta property="og:description" content="Recht, Google-Sichtbarkeit, KI-Sichtbarkeit und Ladezeit – verständlich erklärt. Ein Portfolio-Projekt.">
+  <meta property="og:locale" content="de_AT">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%231f8a4c'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ognjen Jotanovic",
+    "jobTitle": "IT-Lehrling · Website-Checks & Automatisierung",
+    "address": { "@type": "PostalAddress", "addressRegion": "Oberösterreich", "addressCountry": "AT" },
+    "knowsAbout": ["Website-Analyse", "SEO-Grundlagen", "n8n", "Docker", "Linux", "Automatisierung"]
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot"></span>Seitenklar</a>
+    <nav>
+      <a href="#pruefung">Was ich prüfe</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#ueber">Über mich</a>
+      <a class="cta" href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section>
+    <div class="wrap hero">
+      <div>
+        <span class="badge">Portfolio-Projekt · Oberösterreich</span>
+        <h1>Ich finde, was Ihre Website Kunden kostet.</h1>
+        <p class="lead">Ich prüfe Websites von Kleinbetrieben auf rechtliche Grundlagen, Sichtbarkeit bei Google und KI-Suchen und die Ladezeit am Handy – und erkläre das Ergebnis so, dass man es ohne IT-Wissen versteht.</p>
+        <a class="btn" href="#projekte">Projekte ansehen</a>
+        <a class="btn ghost" href="#pruefung">So funktioniert's</a>
+      </div>
+
+      <!-- Beispiel-Bericht (anonymisiert, aus einem echten Check) -->
+      <div class="report" aria-label="Beispiel eines Prüfberichts">
+        <div class="muted" style="font-size:14px">Beispiel-Bericht · Friseursalon in Linz (anonymisiert)</div>
+        <div class="score">79<small>/100</small></div>
+        <div style="margin-top:14px">
+          <div class="row"><span class="ic bad">!</span><div><b>Ladezeit am Handy</b><br><span class="muted">Echte Besucher warten 4,4 s auf den Hauptinhalt (Ziel: unter 2,5 s)</span></div></div>
+          <div class="row"><span class="ic warn">!</span><div><b>Datenschutz-Link</b><br><span class="muted">Nicht eigenständig im Footer verlinkt</span></div></div>
+          <div class="row"><span class="ic ok">✓</span><div><b>Impressum, HTTPS, Google-Titel</b><br><span class="muted">Alles vorhanden</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAS ICH PRÜFE -->
+  <section id="pruefung">
+    <div class="wrap">
+      <div class="kicker">Was ich prüfe</div>
+      <h2>16 Punkte in 4 Bereichen</h2>
+      <p class="lead">Jeder Befund wird von mir zusätzlich von Hand im Browser kontrolliert – automatisch gefunden, menschlich bestätigt.</p>
+      <div class="grid">
+        <div class="card"><div class="emoji">⚖️</div><h3>Grundlagen &amp; Recht</h3><p>HTTPS, Impressum und Datenschutzerklärung – sind sie vorhanden und leicht auffindbar?</p></div>
+        <div class="card"><div class="emoji">🔎</div><h3>Google-Sichtbarkeit</h3><p>Titel, Beschreibung, Überschriften, Sitemap – versteht Google, was Sie anbieten und wo?</p></div>
+        <div class="card"><div class="emoji">🤖</div><h3>KI-Sichtbarkeit</h3><p>Können ChatGPT, Perplexity &amp; Co. Ihre Firmendaten lesen und Sie empfehlen?</p></div>
+        <div class="card"><div class="emoji">📱</div><h3>Ladezeit am Handy</h3><p>Mit echten Messdaten von Google: Wie lange warten Ihre Besucher wirklich?</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section>
+    <div class="wrap">
+      <div class="kicker">Ablauf</div>
+      <h2>So läuft ein Check</h2>
+      <div class="steps">
+        <div class="step"><h3>Automatische Prüfung</h3><p>Mein selbst gebautes Tool (n8n + Google PageSpeed) prüft die Startseite in rund 30 Sekunden.</p></div>
+        <div class="step"><h3>Kontrolle von Hand</h3><p>Jeder rote Punkt wird im Browser und im Quelltext nachgeprüft. Fehlalarme fliegen raus.</p></div>
+        <div class="step"><h3>Verständlicher Bericht</h3><p>Was ist dringend, was ist nur Feinschliff – und was bedeutet das für Ihre Kunden?</p></div>
+      </div>
+      <p class="note"><b>Ehrlich gesagt:</b> Der Check prüft, ob etwas <i>vorhanden</i> ist – nicht, ob es rechtlich vollständig ist. Das ist keine Rechtsberatung; dafür sind WKO oder Anwalt zuständig.</p>
+    </div>
+  </section>
+
+  <!-- PROJEKTE & STIMMEN -->
+  <section id="projekte">
+    <div class="wrap">
+      <div class="kicker">Projekte</div>
+      <h2>Pilotprojekte &amp; Kundenstimmen</h2>
+      <p class="lead">Meine ersten Checks mache ich kostenlos als Pilotprojekte. Hier stehen nur echte Stimmen – mit schriftlicher Zustimmung der Betriebe.</p>
+
+      <div class="grid">
+        <!--
+          SO FÜGST DU EINE ECHTE KUNDENSTIMME EIN (nur mit schriftlicher Zustimmung!):
+          Ersetze einen Platzhalter-Block durch:
+
+          <div class="card">
+            <blockquote>„Hier steht das Zitat – genau so, wie der Kunde es geschrieben hat.“</blockquote>
+            <div class="who"><b>Vorname N.</b>, Firmenname, Ort <span class="pilot">Pilotprojekt · kostenlos</span></div>
+            <p style="margin-top:10px">Ergebnis: z. B. Ladezeit von 4,4 s auf 2,1 s gesenkt</p>
+          </div>
+        -->
+        <div class="card placeholder">
+          <span class="tag">Pilotprojekt 1 · offen</span>
+          <h3>Platz für Ihren Betrieb</h3>
+          <p>Kostenloser Check im Rahmen meines Portfolio-Projekts. Hier erscheint danach – nur mit Ihrer Zustimmung – Ihr Feedback.</p>
+        </div>
+        <div class="card placeholder">
+          <span class="tag">Pilotprojekt 2 · offen</span>
+          <h3>Platz für Ihren Betrieb</h3>
+          <p>Ideal für Friseure, Handwerker, Praxen und kleine Läden in Oberösterreich.</p>
+        </div>
+        <div class="card placeholder">
+          <span class="tag">Pilotprojekt 3 · offen</span>
+          <h3>Platz für Ihren Betrieb</h3>
+          <p>Sie bekommen einen verständlichen Bericht – ich bekomme ehrliches Feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÜBER MICH -->
+  <section id="ueber">
+    <div class="wrap">
+      <div class="kicker">Über mich</div>
+      <h2>Wer hinter Seitenklar steckt</h2>
+      <p class="lead">Ich bin <b>Ognjen</b>, IT-Lehrling aus Oberösterreich. In meiner Freizeit betreibe ich ein eigenes Homelab und automatisiere Abläufe. Das Prüf-Tool hinter Seitenklar habe ich selbst entwickelt, um Kleinbetrieben zu zeigen, wo ihre Website Kunden verliert.</p>
+      <div class="chips">
+        <span class="chip">n8n (Automatisierung)</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Proxmox</span>
+        <span class="chip">Google PageSpeed / Lighthouse</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Active Directory</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="kicker">Kontakt</div>
+      <h2>Interesse an einem Pilotprojekt?</h2>
+      <p class="lead">Schreiben Sie mir einfach eine E-Mail mit der Adresse Ihrer Website.</p>
+      <a class="btn" href="mailto:seitenklar.kontakt@gmail.com?subject=Website-Check%20Pilotprojekt">E-Mail schreiben</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Seitenklar · Portfolio-Projekt, keine gewerblichen Leistungen</span>
+    <span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
