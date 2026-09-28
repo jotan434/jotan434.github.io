@@ -66,13 +66,14 @@
   <section id="pruefung">
     <div class="wrap">
       <div class="kicker">Was ich prüfe</div>
-      <h2>16 Punkte in 4 Bereichen</h2>
+      <h2>Bis zu 21 Punkte in 5 Bereichen</h2>
       <p class="lead">Jeder Befund wird von mir zusätzlich von Hand im Browser kontrolliert – automatisch gefunden, menschlich bestätigt.</p>
       <div class="grid">
         <div class="card"><div class="emoji">⚖️</div><h3>Grundlagen &amp; Recht</h3><p>HTTPS, Impressum und Datenschutzerklärung – sind sie vorhanden und leicht auffindbar?</p></div>
         <div class="card"><div class="emoji">🔎</div><h3>Google-Sichtbarkeit</h3><p>Titel, Beschreibung, Überschriften, Sitemap – versteht Google, was Sie anbieten und wo?</p></div>
         <div class="card"><div class="emoji">🤖</div><h3>KI-Sichtbarkeit</h3><p>Können ChatGPT, Perplexity &amp; Co. Ihre Firmendaten lesen und Sie empfehlen?</p></div>
-        <div class="card"><div class="emoji">📱</div><h3>Ladezeit am Handy</h3><p>Mit echten Messdaten von Google: Wie lange warten Ihre Besucher wirklich?</p></div>
+        <div class="card"><div class="emoji">📱</div><h3>Technik &amp; Ladezeit</h3><p>Mit echten Messdaten von Google: Wie lange warten Ihre Besucher am Handy wirklich?</p></div>
+        <div class="card wide"><span class="pill">Neu</span><div class="emoji">🗂️</div><h3>Die ganze Website, nicht nur die Startseite</h3><p>Zusätzlich zur Startseite prüfe ich bis zu 9 Unterseiten – Impressum, Datenschutz, Kontakt und Leistungen zuerst. Sind alle erreichbar? Hat jede Seite einen eigenen Titel und eine Beschreibung? Ist eine Seite versehentlich vor Google versteckt?</p></div>
       </div>
     </div>
   </section>
@@ -83,11 +84,31 @@
       <div class="kicker">Ablauf</div>
       <h2>So läuft ein Check</h2>
       <div class="steps">
-        <div class="step"><h3>Automatische Prüfung</h3><p>Mein selbst gebautes Tool (n8n + Google PageSpeed) prüft die Website in rund 2 Minuten je nach größe kann es auch bis zu 3 minuten dauern.</p></div>
+        <div class="step"><h3>Automatische Prüfung</h3><p>Mein selbst gebautes Tool (n8n + Google PageSpeed) prüft die Startseite und bis zu 9 Unterseiten. Je nach Größe der Website dauert das 1 bis 3 Minuten.</p></div>
         <div class="step"><h3>Kontrolle von Hand</h3><p>Jeder rote Punkt wird im Browser und im Quelltext nachgeprüft. Fehlalarme fliegen raus.</p></div>
         <div class="step"><h3>Verständlicher Bericht</h3><p>Was ist dringend, was ist nur Feinschliff – und was bedeutet das für Ihre Kunden?</p></div>
       </div>
       <p class="note"><b>Ehrlich gesagt:</b> Der Check prüft, ob etwas <i>vorhanden</i> ist – nicht, ob es rechtlich vollständig ist. Das ist keine Rechtsberatung; dafür sind WKO oder Anwalt zuständig.</p>
+    </div>
+  </section>
+
+  <!-- HINTER DEN KULISSEN: der n8n-Workflow -->
+  <section id="technik">
+    <div class="wrap">
+      <div class="kicker">Blick hinter die Kulissen</div>
+      <h2>Was im Hintergrund passiert</h2>
+      <p class="lead">Die automatische Prüfung im Detail: Diese fünf Schritte führt mein Tool bei jedem Check der Reihe nach aus.</p>
+      <ol class="flow">
+        <li><div class="t"><h3>Adresse vorbereiten</h3></div><p>Aus „beispiel.at“ wird eine saubere Adresse wie „https://beispiel.at/“.</p><span class="node">n8n: Webhook → Vorbereiten</span></li>
+        <li><div class="t"><h3>Startseite laden</h3></div><p>Die Startseite und die Regeln für Suchmaschinen (robots.txt) werden abgerufen.</p><span class="node">n8n: Website laden → robots.txt laden</span></li>
+        <li><div class="t"><span class="pill">Längster Schritt</span><h3>Google misst die Ladezeit</h3></div><p>Google PageSpeed testet die Seite wie ein Handy: Ladezeit, SEO und Barrierefreiheit.</p><span class="node">n8n: PageSpeed prüfen</span></li>
+        <li><div class="t"><span class="pill">Neu</span><h3>Unterseiten prüfen</h3></div><p>Bis zu 9 Unterseiten werden nacheinander mit kurzer Pause abgerufen – das schont Ihren Server. Bereiche, die laut robots.txt gesperrt sind, bleiben tabu.</p><span class="node">n8n: Unterseiten finden → laden → auswerten</span></li>
+        <li><div class="t"><h3>Bericht erstellen</h3></div><p>Alle Ergebnisse werden bewertet und nach Dringlichkeit sortiert: Rot, Gelb, Grün.</p><span class="node">n8n: Auswerten &amp; Bericht → Bericht senden</span></li>
+      </ol>
+      <figure class="shot">
+        <a href="workflow.png" target="_blank" rel="noopener"><img src="workflow.png" width="1368" height="354" loading="lazy" alt="Screenshot des Seitenklar-Workflows in n8n: zehn verbundene Schritte, von „Webhook“ bis „Bericht senden“."></a>
+        <figcaption>So sieht der echte Workflow in n8n aus (zum Vergrößern anklicken).</figcaption>
+      </figure>
     </div>
   </section>
 
