@@ -37,7 +37,8 @@ Every red finding is then verified by hand in the browser and source code.
 - Hosted on **GitHub Pages**
 - Checking tool: n8n, Docker, Linux, Google PageSpeed / Lighthouse
 
-## Run locally
+## Want to try it?
+## Run locally:
 
 ```bash
 git clone https://github.com/jotan434/jotan434.github.io.git
