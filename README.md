@@ -57,6 +57,7 @@ Every push to `main` is published automatically by GitHub Pages (usually within 
 Nova answers visitors' questions about the check. It is a vanilla-JS widget (`nova/chat-widget.js`, no dependencies, no external requests) that talks to an **n8n AI Agent** (Claude Haiku) through a webhook. The API key stays in n8n, never in the browser.
 
 - `nova/nova-config.js` loads the widget **only if a webhook URL is set** (`PUBLIC_WEBHOOK`). While it is empty, visitors see no chat.
+- Cost protection: the workflow has a **Limit-Check** node (daily cap, per-conversation cap, max. message length). Numbers are constants at the top of its code.
 - `n8n/nova-workflow.json`: import into n8n, add Anthropic credentials, activate. `n8n/nova-system-prompt.md` holds the knowledge Nova answers from.
 - Test locally: `python3 -m http.server 8000`, open `http://localhost:8000`. On `localhost` the widget uses the local n8n webhook (add `http://localhost:8000` to the Chat Trigger's allowed origins).
 - Before going live: public HTTPS URL for n8n, spend limit in the Claude Console, rate limit, and the privacy policy section about the chat.
