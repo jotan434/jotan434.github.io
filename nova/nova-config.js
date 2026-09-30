@@ -5,7 +5,7 @@
  */
 (function () {
   // Öffentliche HTTPS-URL des n8n-Chat-Triggers (Production URL). Erst eintragen, wenn n8n aus dem Internet erreichbar ist.
-  var PUBLIC_WEBHOOK = '';
+  var PUBLIC_WEBHOOK = 'https://diana-players-toronto-bars.trycloudflare.com/webhook/4f3c9a1e-7b2d-4c8e-a6f1-2d9e8b7c5a10/chat';
   // Nur zum Testen auf dem eigenen Rechner (python3 -m http.server 8000 → http://localhost:8000). Greift nie auf der Live-Seite.
   var LOCAL_WEBHOOK = 'http://localhost:5678/webhook/4f3c9a1e-7b2d-4c8e-a6f1-2d9e8b7c5a10/chat';
 
